@@ -1,0 +1,882 @@
+<div class="content">
+  <section class="slider">
+    <div class="slider">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <%= image_tag "slider2.jpg" %>
+          </div>
+
+          <div class="item">
+            <%= image_tag "slider2.jpg" %>
+          </div>
+
+          <div class="item">
+            <%= image_tag "slider2.jpg" %>
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-1">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="services">
+              <div class="owl-carousel owl-services">
+                <div class="item">
+                  <div class="policy-services">
+                    <%= link_to "#" do %> 
+                    <%= image_tag  "icon/policy_1.png" %>
+                    <% end %>
+                    <div class="info a-left">
+                      <h3>Vận chuyển miễn phí</h3>
+                      <p>Cho đơn hàng &gt; 500.000đ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="policy-services">
+                    <%= link_to "#" do %> 
+                    <%= image_tag "icon/policy_2.png" %>
+                    <% end %>
+                    <div class="info a-left">
+                      <h3>Mua 2 được giảm giá</h3>
+                      <p>Lên đến 10% cho đơn hàng tiếp</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="policy-services">
+                    <%= link_to "#" do %> 
+                    <%= image_tag "icon/policy_3.png" %>
+                    <% end %>
+                    <div class="info a-left">
+                      <h3>Chứng nhận chất lượng</h3>
+                      <p>Sản phẩm chất lượng kiểm định</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="policy-services">
+                    <%= link_to "#" do %> 
+                    <%= image_tag "icon/policy_4.png" %>
+                    <% end %>
+                    <div class="info a-left">
+                      <h3>Hotline:19001234</h3>
+                      <p>Ho tro truc tiep nhanh trong</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-2">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>Siêu khuyến mại</h2>                
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="product">
+              <div class="owl-carousel owl-product">
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product1.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product2.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product3.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product4.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product5.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center mb-5">
+            <%= link_to "Xem tất cả", "#", :class => "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-3">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>TOP SẢN PHẨM HOT NHẤT TUẦN</h2>               
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="product">
+              <div class="owl-carousel owl-product">
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product1.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product2.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product3.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product4.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="product-box">                             
+                    <div class="product-thumbnail flexbox-grid">  
+                      <%= link_to "#" do %>
+                      <%= image_tag "product/product5.jpg" %>
+                      <% end %> 
+                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                          <div> 
+                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                            </button>
+                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                            <i class="fa fa-eye"></i>
+                            <% end %>
+                          </div>
+                        </form>
+                      </div>  
+                    </div>
+                    <div class="product-info a-center">
+                      <h3 class="product-name">
+                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                      </h3>
+                      <div class="price-box clearfix">
+                        <div class="special-price">
+                          <span class="price product-price">360.000₫</span>
+                        </div>                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 text-center mb-5">
+            <%= link_to "Xem tất cả", "#", :class => "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-4">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="banner">
+            <div class="owl-carousel owl-banner">
+              <div class="item">
+                <%= link_to "#", :class => "img2" do %>
+                <%= image_tag "banner/col_banner_img_1.jpg", :class =>"img2" %>
+                <% end %>
+              </div>
+              <div class="item">
+                <%= link_to "#", :class => "img2" do %>
+                <%= image_tag "banner/col_banner_img_2.jpg", :class =>"img2" %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-5">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>NHỮNG SẢN PHẨM MỚI NHẤT</h2>                
+            </div>
+          </div>
+          <div class="product-new">
+            <ul class="list-product-new">
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product1.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product2.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product3.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product4.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product5.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product1.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product2.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-3">
+                <div class="product-box">                             
+                  <div class="product-thumbnail flexbox-grid">  
+                    <%= link_to "#" do %>
+                    <%= image_tag "product/product3.jpg" %>
+                    <% end %> 
+                    <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                      <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                        <div> 
+                          <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                          </button>
+                          <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                          <i class="fa fa-eye"></i>
+                          <% end %>
+                        </div>
+                      </form>
+                    </div>  
+                  </div>
+                  <div class="product-info a-center">
+                    <h3 class="product-name">
+                      <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                    </h3>
+                    <div class="price-box clearfix">
+                      <div class="special-price">
+                        <span class="price product-price">360.000₫</span>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-6">
+    <div class="parallax-content">
+      <div class="special-style overlay">
+        <div class="special-banner-image"></div>
+      </div>
+      <div class="section-content">
+        <div class="container">
+          <div class="text-center">
+            <h3 class="title">Xem giới thiệu về Dualeo <span>Shoes</span></h3>
+            <a data-fancybox="" href="https://www.youtube.com/watch?v=a_0GkKQ_nzc">
+              <img src="//bizweb.dktcdn.net/100/311/377/themes/672639/assets/icon-play-video.png?1539659617569" alt="Video sản phẩm"> 
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-7">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title">
+              <h2>THÔNG TIN KHUYẾN MÃI</h2>               
+            </div>
+          </div>
+          <div class="col-md-12 news-post">
+            <div class="owl-carousel owl-post-sale">
+              <div class="item">
+                <article class="blog-item text-center">
+                  <div>
+                    <div class="blog-item-thumbnail">           
+                      <%= link_to "#" do %>
+                      <%= image_tag "post/image-5098.jpeg" %>
+                      <% end %>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <%= link_to "Những mẫu giày mới nhất trong năm này cho bạn","#" %>
+                      </h3>
+                      <p class="blog-item-summary"> Không chỉ được làm từ các chất liệu sang trọng bậc nhất, mẫu giày của nhà thiết kế Antonio Vietri còn ghi điểm với giới thượng lưu nhờ thiết...</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="item">
+                <article class="blog-item text-center">
+                  <div>
+                    <div class="blog-item-thumbnail">           
+                      <%= link_to "#" do %>
+                      <%= image_tag "post/image-2.jpeg" %>
+                      <% end %>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <%= link_to "Những mẫu giày mới nhất trong năm này cho bạn","#" %>
+                      </h3>
+                      <p class="blog-item-summary"> Không chỉ được làm từ các chất liệu sang trọng bậc nhất, mẫu giày của nhà thiết kế Antonio Vietri còn ghi điểm với giới thượng lưu nhờ thiết...</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="item">
+                <article class="blog-item text-center">
+                  <div>
+                    <div class="blog-item-thumbnail">           
+                      <%= link_to "#" do %>
+                      <%= image_tag "post/image-3.jpeg" %>
+                      <% end %>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <%= link_to "Những mẫu giày mới nhất trong năm này cho bạn","#" %>
+                      </h3>
+                      <p class="blog-item-summary"> Không chỉ được làm từ các chất liệu sang trọng bậc nhất, mẫu giày của nhà thiết kế Antonio Vietri còn ghi điểm với giới thượng lưu nhờ thiết...</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="item">
+                <article class="blog-item text-center">
+                  <div>
+                    <div class="blog-item-thumbnail">           
+                      <%= link_to "#" do %>
+                      <%= image_tag "post/image-5098.jpeg" %>
+                      <% end %>
+                    </div>
+                    <div class="blog-item-info">
+                      <h3 class="blog-item-name">
+                        <%= link_to "Những mẫu giày mới nhất trong năm này cho bạn","#" %>
+                      </h3>
+                      <p class="blog-item-summary"> Không chỉ được làm từ các chất liệu sang trọng bậc nhất, mẫu giày của nhà thiết kế Antonio Vietri còn ghi điểm với giới thượng lưu nhờ thiết...</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="awe-section-8">
+    <div class="special-offer-inr-block new-block">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="brand">
+              <div class="owl-carousel owl-brand">
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand1.png" %>
+                  <% end %>
+                </div>
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand2.png" %>
+                  <% end %>
+                </div>
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand1.png" %>
+                  <% end %>
+                </div>
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand2.png" %>
+                  <% end %>
+                </div>
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand1.png" %>
+                  <% end %>
+                </div>
+                <div class="item">
+                  <%= link_to "#" do %>
+                  <%= image_tag "brand/brand2.png" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

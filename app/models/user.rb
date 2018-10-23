@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  enum role: [:customer, :admin]
   has_many :rates
   has_many :orders
   has_many :comments
@@ -9,7 +10,7 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_blank: true
   validates :phone, numericality: true, 
             format: { with: /\A[0-9]{10,11}\z/ }
   validates :address, presence: true, length: { maximum: 50 }

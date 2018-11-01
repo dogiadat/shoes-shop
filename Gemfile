@@ -13,6 +13,7 @@ gem "jquery-rails", "~> 4.3", ">= 4.3.1"
 gem "rails", "~> 5.1.6"
 gem "sqlite3"
 gem "jbuilder", "~> 2.5"
+gem "adminlte-rails"
 group :development, :test do
   gem "font-awesome-rails"
   gem "puma", "~> 3.7"

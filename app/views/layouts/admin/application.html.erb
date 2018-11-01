@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AdminLTE 2 | Dashboard</title>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <%= stylesheet_link_tag "admin/application", media: "all", "data-turbolinks-track": "reload" %>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+   <%= render "layouts/admin/header" %>
+   <div class="content-wrapper">
+     <% flash.each do |message_type, message| %>
+     <div class="alert alert-<%= message_type %>"><%= message %></div>
+     <% end %>
+   </div>
+   <%= yield %>
+   <%= render "layouts/admin/footer" %>
+   <%= javascript_include_tag "admin/application", "data-turbolinks-track": "reload" %>
+ </div>
+</body>
+</html>

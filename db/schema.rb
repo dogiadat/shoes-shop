@@ -20,11 +20,14 @@ ActiveRecord::Schema.define(version: 20181017085616) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
+    t.integer "user_id"
+    t.integer "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.string "address"
     t.string "phone"
@@ -35,12 +38,15 @@ ActiveRecord::Schema.define(version: 20181017085616) do
   end
 
   create_table "product_orders", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "product_id"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|
+    t.integer "category_id"
     t.string "name"
     t.string "description"
     t.integer "price"
@@ -52,6 +58,8 @@ ActiveRecord::Schema.define(version: 20181017085616) do
   end
 
   create_table "rates", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "product_id"
     t.integer "star"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -62,7 +70,7 @@ ActiveRecord::Schema.define(version: 20181017085616) do
     t.string "address"
     t.string "email"
     t.string "phone"
-    t.integer "role", default: 0
+    t.integer "role", default: 0, null: false
     t.string "password_digest"
     t.string "reset_digest"
     t.datetime "reset_sent_at"

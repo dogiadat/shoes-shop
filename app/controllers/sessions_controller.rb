@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-      redirect_back_or user
+      if current_user.admin?
+        redirect_to admin_root_path
+      else
+        redirect_back_or root_path
+      end
     else
       flash.now[:danger] = "Đăng nhập sai vui lòng kiểm tra lại"
       render :new

@@ -42,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find_by id: params[:id].destroy
+    User.find_by(id: params[:id]).destroy
     flash[:success] = "Đã xóa người dùng thành công"
     redirect_to users_url
   end

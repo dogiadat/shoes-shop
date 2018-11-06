@@ -1,0 +1,27 @@
+<% provide :title, "Danh sách Hãng giầy" %>
+<section class="content-header">
+  <h1>Danh mục hãng giầy</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Tên hãng</th>
+        <th>Hiển thị</th>
+        <th>Chỉnh sửa</th>
+        <th>Xóa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td><%= link_to "Show", admin_category_path(category) %></td>
+          <td><%= link_to "Edit", edit_admin_category_path(category) %></td>
+          <td><%= link_to "Destroy", admin_category_path(category),
+            data: { confirm: "Chắc chắn xóa?" }, method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to "New category", new_admin_category_path, class: "btn btn-primary" %>
+  <%= will_paginate %>
+</section>

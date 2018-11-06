@@ -1,4 +1,4 @@
-<header>                
+<header>
   <div class="header-area">
     <div class="header-top-area">
       <div class="container">
@@ -30,22 +30,8 @@
                 <li>
                   <%= link_to "Tôi", "#" %>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Account <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <%= link_to "Thông tin cá nhân", current_user %>
-                    </li>
-                    <li>
-                      <%= link_to "Cài đặt", "#" %>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                      <%= link_to "Đăng xuất", logout_path, method: :delete %>
-                    </li>
-                  </ul>
+                <li>
+                  <%= link_to "Đăng xuất", logout_path, method: :delete %>
                 </li>
                 <% end %>
               </ul>
@@ -56,14 +42,14 @@
     </div>
     <div class="header-bottom-area" id="sticker">
       <div class="container">
-       <div class="row">                         
+       <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="logo-area">
              <%= link_to root_path do  %>
              <%= image_tag "logo.png" %>
              <% end %>
             </div>
-          </div>  
+          </div>
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <div class="main-menu-area">
               <nav>
@@ -79,35 +65,35 @@
                       <ul>
                         <li>
                           <%= link_to "Shoes1", "#" %>
-                        </li>        
+                        </li>
                         <li>
                           <%= link_to "Shoes2 ", "#" %>
-                        </li>        
+                        </li>
                         <li>
                           <%= link_to "Shoes3", "#" %>
-                        </li>        
+                        </li>
                         <li>
                           <%= link_to "Shoes4", "#" %>
-                        </li>        
+                        </li>
                         <li>
                           <%= link_to "Shoes5", "#" %>
-                        </li> 
+                        </li>
                         <li>
                           <%= link_to "Shoes6", "#" %>
-                        </li> 
-                      </ul>   
+                        </li>
+                      </ul>
                     </li>
                     <li>
                       <%= link_to "Page", "#" %>
                       <ul>
                           <li>
                             <%= link_to "Blog", "#" %>
-                          </li>                                                       
+                          </li>
                           <li>
                             <%= link_to "Single", "#" %>
-                          </li> 
+                          </li>
                       </ul>
-                    </li>   
+                    </li>
                     <li>
                       <%= link_to "News", "#" %>
                     </li>
@@ -117,12 +103,12 @@
                 </ul>
               </nav>
             </div>
-          </div>   
+          </div>
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <ul class="header-cart-area">
               <li class="header-search">
                 <form>
-                  <input type="text" class="search-form" placeholder="Search...." required="">  
+                  <input type="text" class="search-form" placeholder="Search...." required="">
                     <a href="#" class="search-button" id="search-button">
                       <i class="fa fa-search" aria-hidden="true"></i>
                    </a>
@@ -235,9 +221,9 @@
                   </div>
               </li>
             </ul>
-          </div> 
-        </div>                          
-      </div> 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="mobile-menu-area">
@@ -259,7 +245,7 @@
                     <li>
                       <%= link_to "Home", "#" %>
                     </li>
-                  </ul>   
+                  </ul>
                 </li>
                 <li>
                   <%= link_to "About", "#" %>
@@ -269,7 +255,7 @@
                     </li>
                     <li>
                       <%= link_to "About2", "#" %>
-                    </li>   
+                    </li>
                     <li class="has-child-menu">
                       <%= link_to "Demo", "#" %>
                       <ul class="thired-level">
@@ -280,7 +266,7 @@
                           <%= link_to "Demo2", "#" %>
                         </li>
                       </ul>
-                    </li> 
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -288,27 +274,27 @@
                   <ul>
                     <li>
                       <%= link_to "Shoes1", "#" %>
-                    </li>        
+                    </li>
                     <li>
                       <%= link_to "Shoes2", "#" %>
-                    </li>        
+                    </li>
                     <li>
                       <%= link_to "Shoes3", "#" %>
-                    </li>        
+                    </li>
                     <li>
                       <%= link_to "Shoes4", "#" %>
-                    </li>        
+                    </li>
                     <li>
                       <%= link_to "Shoes5", "#" %>
-                    </li> 
+                    </li>
                     <li>
                       <%= link_to "Shoes6", "#" %>
-                    </li> 
-                  </ul>   
+                    </li>
+                  </ul>
                 </li>
                 <li>
                  <%= link_to "Blog", "#" %>
-                </li> 
+                </li>
                 <li>
                   <%= link_to "Page", "#" %>
                   <ul>
@@ -318,7 +304,7 @@
                     <li>
                       <%= link_to "Single", "#" %>
                     </li>
-                  </ul>                                           
+                  </ul>
                 </li>
                 <li>
                   <%= link_to "News", "#" %>
@@ -328,9 +314,9 @@
                 </li>
               </ul>
             </nav>
-          </div>           
+          </div>
         </div>
       </div>
     </div>
-  </div>  
+  </div>
 </header>

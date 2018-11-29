@@ -4,10 +4,11 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.integer :category_id
       t.string :name
       t.string :description
-      t.integer :price
+      t.decimal :price
       t.integer :status
       t.string :image
       t.date :create_at
+      t.integer :category
       t.timestamps
     end
   end

@@ -31,3 +31,14 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    models:
+      category: loại giày
+    attributes:
+      category:
+        name: Tên
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      blank: không được bỏ trống!
+      taken: nhãn hiệu đã bị trùng!

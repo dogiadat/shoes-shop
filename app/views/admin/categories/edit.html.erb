@@ -1,0 +1,15 @@
+<% provide :title, "Chỉnh sửa thông tin" %>
+<section class="content-header">
+  <h1>Chỉnh sửa thông tin</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for [:admin, @category] do |f| %>
+        <%= render "shared/error_messages", object: @category %>
+        <%= f.label :name, "Tên nhãn hiệu" %>
+        <%= f.text_field :name, placeholder: "Nhập tên nhãn hiệu", class: "form-control" %>
+        <%= f.submit "Cập nhật", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</section>
+

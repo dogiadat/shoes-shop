@@ -21,10 +21,10 @@
             <div class="header-top-right">
               <ul>
                 <% if !logged_in? %>
-                <li>
-                  <%= link_to "Đăng nhập", login_path, class: "login" %>
-                  <%= link_to "Singup", signup_path %>
-                </li>
+                  <li>
+                    <%= link_to "Đăng nhập", login_path, class: "login" %>
+                    <%= link_to "Singup", signup_path %>
+                  </li>
                 <% end %>
                 <% if logged_in? %>
                   <li>
@@ -50,61 +50,44 @@
        <div class="row">
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <div class="logo-area">
-             <%= link_to root_path do  %>
-             <%= image_tag "logo.png" %>
-             <% end %>
+              <%= link_to root_path do  %>
+              <%= image_tag "logo.png" %>
+              <% end %>
             </div>
           </div>
           <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
             <div class="main-menu-area">
               <nav>
                 <ul>
-                    <li class="active">
-                      <%= link_to "Home", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "About", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shop shoes", "#" %>
-                      <ul>
-                        <li>
-                          <%= link_to "Shoes1", "#" %>
-                        </li>
-                        <li>
-                          <%= link_to "Shoes2 ", "#" %>
-                        </li>
-                        <li>
-                          <%= link_to "Shoes3", "#" %>
-                        </li>
-                        <li>
-                          <%= link_to "Shoes4", "#" %>
-                        </li>
-                        <li>
-                          <%= link_to "Shoes5", "#" %>
-                        </li>
-                        <li>
-                          <%= link_to "Shoes6", "#" %>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <%= link_to "Page", "#" %>
-                      <ul>
-                          <li>
-                            <%= link_to "Blog", "#" %>
-                          </li>
-                          <li>
-                            <%= link_to "Single", "#" %>
-                          </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <%= link_to "News", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Contact", "#" %>
-                    </li>
+                  <li class="active">
+                    <%= link_to "Home", "#" %>
+                  </li>
+                  <li>
+                    <%= link_to "About", "#" %>
+                  </li>
+                  <li>
+                    <%= link_to "Shop shoes", "#" %>
+                    <ul>
+                      <% Category.all.each do |category| %>
+                      <li>
+                        <%= link_to category.name %>
+                      </li>
+                      <% end %>
+                    </ul>
+                  </li>
+                  <li>
+                    <%= link_to "Page", "#" %>
+                    <ul>
+                        <li><%= link_to "Blog", "#" %></li>
+                        <li><%= link_to "Single", "#" %></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <%= link_to "News", "#" %>
+                  </li>
+                  <li>
+                    <%= link_to "Contact", "#" %>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -114,211 +97,118 @@
               <li class="header-search">
                 <form>
                   <input type="text" class="search-form" placeholder="Search...." required="">
-                    <a href="#" class="search-button" id="search-button">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                   </a>
+                  <a href="#" class="search-button" id="search-button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                 </a>
                 </form>
               </li>
-               <li>
-                 <div class="cart-area">
-                    <%= link_to "#" do %>
-                      <i aria-hidden="true" class="fa fa-shopping-cart"></i>
-                      <span>2</span>
-                    <% end %>
-                    <ul>
-                      <li>
-                        <div class="cart-single-product">
-                          <div class="media">
-                            <div class="pull-left cart-product-img">
-                              <%= link_to "#" do %>
-                              <%= image_tag "cart/image-cart1.jpg", class: "img-responsive" %>
-                              <% end %>
-                            </div>
-                            <div class="media-body cart-content">
-                              <ul>
-                                <li>
-                                   <h1>
-                                    <%= link_to "Lunch Menu", "#" %>
-                                  </h1>
-                                  <p>
-                                    <span>Code:</span> STPT600
-                                  </p>
-                                </li>
-                                <li>
-                                  <p>X 1</p>
-                                </li>
-                                <li>
-                                  <p>$49</p>
-                                </li>
-                               <li>
-                                  <%= link_to "#", class: "trash" do %>
-                                    <i class="fa fa-trash-o"></i>
-                                  <% end %>
-                               </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="cart-single-product">
-                          <div class="media">
-                            <div class="pull-left cart-product-img">
-                              <%= link_to "#" do %>
-                                <%= image_tag "cart/image-cart2.jpg", class: "img-responsive" %>
-                              <% end %>
-                            </div>
-                            <div class="media-body cart-content">
-                              <ul>
-                                <li>
-                                  <h1>
-                                    <%= link_to "Dinner Menu", "#" %>
-                                  </h1>
-                                  <p>
-                                    <span>Code:</span> STPT460
-                                  </p>
-                                </li>
-                                <li>
-                                 <p>X 1</p>
-                                </li>
-                                <li>
-                                 <p>$75</p>
-                                </li>
-                                <li>
-                                  <%= link_to "#", class: "trash" do %>
-                                    <i class="fa fa-trash-o"></i>
-                                  <% end %>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <span>
-                          <span>Sub Total</span>
-                        </span>
-                        <span>$124</span>
-                        <span>
-                          <span>Discount</span>
-                        </span>
-                        <span>$30</span>
-                        <span>
-                          <span>Vat(20%)</span>
-                        </span>
-                        <span>$18.8</span>
-                        <span>
-                          <span>Sub Total</span>
-                        </span>
-                        <span>$112.8</span>
-                      </li>
-                      <li>
-                        <ul class="checkout">
-                          <li>
-                            <%= link_to "View Cart", "#", class: "default-btn" %>
-                          </li>
-                          <li>
-                            <%= link_to "Checkout", "#", class: "default-btn"  %>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="mobile-menu-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="mobile-menu">
-            <nav id="dropdown">
-              <ul>
-                <li>
-                  <%= link_to "Home", "#" %>
+              <li>
+                <div class="cart-area">
+                  <%= link_to "#" do %>
+                    <i aria-hidden="true" class="fa fa-shopping-cart"></i>
+                    <span>2</span>
+                  <% end %>
                   <ul>
                     <li>
-                      <%= link_to "Home1", "#" %>
+                      <div class="cart-single-product">
+                        <div class="media">
+                          <div class="pull-left cart-product-img">
+                            <%= link_to "#" do %>
+                              <%= image_tag "cart/image-cárt.jpg", class: "img-responsive" %>
+                            <% end %>
+                          </div>
+                          <div class="media-body cart-content">
+                            <ul>
+                              <li>
+                                <h1>
+                                  <%= link_to "Lunch Menu", "#" %>
+                                </h1>
+                                <p>
+                                  <span>Code:</span> STPT600
+                                </p>
+                              </li>
+                              <li>
+                                <p>X 1</p>
+                              </li>
+                              <li>
+                                <p>$49</p>
+                              </li>
+                             <li>
+                                <%= link_to "#", class: "trash" do %>
+                                  <i class="fa fa-trash-o"></i>
+                                <% end %>
+                             </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <%= link_to "Home2", "#" %>
+                      <div class="cart-single-product">
+                        <div class="media">
+                          <div class="pull-left cart-product-img">
+                            <%= link_to "#" do %>
+                              <%= image_tag "cart/image-càrt.jpg", class: "img-responsive" %>
+                            <% end %>
+                          </div>
+                          <div class="media-body cart-content">
+                            <ul>
+                              <li>
+                                <h1>
+                                  <%= link_to "Dinner Menu", "#" %>
+                                </h1>
+                                <p>
+                                  <span>Code:</span> STPT460
+                                </p>
+                              </li>
+                              <li>
+                               <p>X 1</p>
+                              </li>
+                              <li>
+                               <p>$75</p>
+                              </li>
+                              <li>
+                                <%= link_to "#", class: "trash" do %>
+                                  <i class="fa fa-trash-o"></i>
+                                <% end %>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </li>
                     <li>
-                      <%= link_to "Home", "#" %>
+                      <span>
+                        <span>Sub Total</span>
+                      </span>
+                      <span>$124</span>
+                      <span>
+                        <span>Discount</span>
+                      </span>
+                      <span>$30</span>
+                      <span>
+                        <span>Vat(20%)</span>
+                      </span>
+                      <span>$18.8</span>
+                      <span>
+                        <span>Sub Total</span>
+                      </span>
+                      <span>$112.8</span>
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  <%= link_to "About", "#" %>
-                  <ul>
                     <li>
-                     <%= link_to "About1", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "About2", "#" %>
-                    </li>
-                    <li class="has-child-menu">
-                      <%= link_to "Demo", "#" %>
-                      <ul class="thired-level">
+                      <ul class="checkout">
                         <li>
-                          <%= link_to "Demo1", "#" %>
+                          <%= link_to "View Cart", "#", class: "default-btn" %>
                         </li>
                         <li>
-                          <%= link_to "Demo2", "#" %>
+                          <%= link_to "Checkout", "#", class: "default-btn"  %>
                         </li>
                       </ul>
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <%= link_to "Shoes shop", "#" %>
-                  <ul>
-                    <li>
-                      <%= link_to "Shoes1", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shoes2", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shoes3", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shoes4", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shoes5", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Shoes6", "#" %>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                 <%= link_to "Blog", "#" %>
-                </li>
-                <li>
-                  <%= link_to "Page", "#" %>
-                  <ul>
-                    <li>
-                      <%= link_to "Blog", "#" %>
-                    </li>
-                    <li>
-                      <%= link_to "Single", "#" %>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <%= link_to "News", "#" %>
-                </li>
-                <li>
-                  <%= link_to "Contact", "#" %>
-                </li>
-              </ul>
-            </nav>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

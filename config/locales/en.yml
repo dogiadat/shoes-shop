@@ -36,9 +36,19 @@ en:
       category: loại giày
     attributes:
       category:
+        name: Tên chuyên mục
+      product: Tên
+    attributes:
+      product:
         name: Tên
+        price: Giá
+        description: Mô tả
   errors:
     format: "%{attribute} %{message}"
     messages:
       blank: không được bỏ trống!
       taken: nhãn hiệu đã bị trùng!
+      blank:  sản phẩm không được bỏ trống
+      taken: sản phẩm đã bị trùng!
+      blank:  sản phẩm không được bỏ trống
+      blank:  sản phẩm không được bỏ trống

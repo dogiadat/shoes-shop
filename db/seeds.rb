@@ -17,11 +17,11 @@ User.create!(name:  "Le Khac Sang",
                password:              password,
                password_confirmation: password)
 end
-
-5.times do |n|
-  name  = Faker::Name.name
-  Category.create!(name: name)
-end
+Category.create!(name: "Nike")
+Category.create!(name: "Adidas")
+Category.create!(name: "Faker")
+Category.create!(name: "Cheseal boot")
+Category.create!(name: "Cnes")
 
 10.times do |n|
   name  = Faker::Name.name
@@ -30,7 +30,7 @@ end
                 price: 1000000,
                 status: 1,
                 category_id: 1,
-                image: File.open("#{Rails.root}/app/assets/images/cart/image-cart2.jpg")
+                image: File.open("#{Rails.root}/app/assets/images/product/product2.jpg")
                 )
 end
 

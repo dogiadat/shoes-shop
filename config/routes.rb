@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get    "/login",   to: "sessions#new"
   post   "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
+  get "/nike", to:"products#nike"
   resources :users
+  resources :products
+  resources :categories
   namespace :admin do
     root "dashboard#index"
     get "dashboard/index"

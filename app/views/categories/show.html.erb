@@ -1,0 +1,45 @@
+<% provide :title, @categories.name %>
+<div class="content">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-9">
+        <% @products.each do |product| %>
+        <div class="col-md-4">
+          <div class="product-box">
+            <div class="product-thumbnail flexbox-grid">
+              <%= link_to product do %>
+                <%= image_tag product.image %>
+              <% end %>
+              <div class="product-action clearfix">
+                <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                  <div>
+                    <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                      <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </button>
+                    <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                    <i class="fa fa-eye"></i>
+                    <% end %>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="product-info a-center">
+              <h3 class="product-name">
+                <%= link_to product.name, "#" %>
+              </h3>
+              <div class="price-box clearfix">
+                <div class="special-price">
+                  <span class="price product-price"><%= product.price%>$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <%= will_paginate @products %>
+    </div>
+  </div>
+</div>

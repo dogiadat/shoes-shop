@@ -43,7 +43,7 @@
               <div class="owl-carousel owl-services">
                 <div class="item">
                   <div class="policy-services">
-                    <%= link_to "#" do %> 
+                    <%= link_to "#" do %>
                     <%= image_tag  "icon/policy_1.png" %>
                     <% end %>
                     <div class="info a-left">
@@ -54,7 +54,7 @@
                 </div>
                 <div class="item">
                   <div class="policy-services">
-                    <%= link_to "#" do %> 
+                    <%= link_to "#" do %>
                     <%= image_tag "icon/policy_2.png" %>
                     <% end %>
                     <div class="info a-left">
@@ -65,7 +65,7 @@
                 </div>
                 <div class="item">
                   <div class="policy-services">
-                    <%= link_to "#" do %> 
+                    <%= link_to "#" do %>
                     <%= image_tag "icon/policy_3.png" %>
                     <% end %>
                     <div class="info a-left">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="item">
                   <div class="policy-services">
-                    <%= link_to "#" do %> 
+                    <%= link_to "#" do %>
                     <%= image_tag "icon/policy_4.png" %>
                     <% end %>
                     <div class="info a-left">
@@ -98,172 +98,58 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title">
-              <h2>Siêu khuyến mại</h2>                
+              <h2>
+                <% @categories.each do |category| %>
+                  <% if category.id ==1 %>
+                    <%= category.name %>
+                  <% end %>
+                <% end %>
+              </h2>
             </div>
           </div>
           <div class="col-md-12">
             <div class="product">
               <div class="owl-carousel owl-product">
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product1.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
+                <% @products.each do |product| %>
+                  <% if product.category_id == 1 %>
+                  <div class="item">
+                    <div class="product-box">
+                      <div class="product-thumbnail flexbox-grid">
+                        <%= link_to product do %>
+                          <%= image_tag product.image %>
+                        <% end %>
+                        <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
+                          <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
+                            <div>
+                              <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                              </button>
+                              <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
+                              <i class="fa fa-eye"></i>
+                              <% end %>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="product-info a-center">
+                        <h3 class="product-name">
+                          <%= link_to product.name, "#" %>
+                        </h3>
+                        <div class="price-box clearfix">
+                          <div class="special-price">
+                            <span class="price product-price"><%= product.price%>$</span>
                           </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product2.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product3.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product4.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product5.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <% end %>
+                <% end %>
               </div>
             </div>
           </div>
           <div class="col-xs-12 text-center mb-5">
-            <%= link_to "Xem tất cả", "#", :class => "btn btn-primary" %>
+            <%= link_to "Xem tất cả", nike_path, :class => "btn btn-primary" %>
           </div>
         </div>
       </div>
@@ -275,21 +161,29 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title">
-              <h2>TOP SẢN PHẨM HOT NHẤT TUẦN</h2>               
+              <h2>
+                <% @categories.each do |category| %>
+                  <% if category.id ==2 %>
+                    <%= category.name %>
+                  <% end %>
+                <% end %>
+              </h2>
             </div>
           </div>
           <div class="col-md-12">
             <div class="product">
               <div class="owl-carousel owl-product">
+                <% @products.each do |product| %>
+                  <% if product.category_id == 2 %>
                 <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
+                  <div class="product-box">
+                    <div class="product-thumbnail flexbox-grid">
                       <%= link_to "#" do %>
-                      <%= image_tag "product/product1.jpg" %>
-                      <% end %> 
+                      <%= image_tag product.image %>
+                      <% end %>
                       <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                         <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
+                          <div>
                             <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                             </button>
@@ -298,144 +192,22 @@
                             <% end %>
                           </div>
                         </form>
-                      </div>  
+                      </div>
                     </div>
                     <div class="product-info a-center">
                       <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
+                        <%= link_to product.name %>
                       </h3>
                       <div class="price-box clearfix">
                         <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
+                          <span class="price product-price"><%= product.price %>$</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product2.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product3.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product4.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="product-box">                             
-                    <div class="product-thumbnail flexbox-grid">  
-                      <%= link_to "#" do %>
-                      <%= image_tag "product/product5.jpg" %>
-                      <% end %> 
-                      <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
-                        <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                          <div> 
-                            <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
-                              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            </button>
-                            <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
-                            <i class="fa fa-eye"></i>
-                            <% end %>
-                          </div>
-                        </form>
-                      </div>  
-                    </div>
-                    <div class="product-info a-center">
-                      <h3 class="product-name">
-                        <%= link_to "Giày cao gót trở lại dép vũ trụ hoa cao sling", "#" %>
-                      </h3>
-                      <div class="price-box clearfix">
-                        <div class="special-price">
-                          <span class="price product-price">360.000₫</span>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  <% end %>
+                <% end %>
               </div>
             </div>
           </div>
@@ -474,20 +246,20 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title">
-              <h2>NHỮNG SẢN PHẨM MỚI NHẤT</h2>                
+              <h2>NHỮNG SẢN PHẨM MỚI NHẤT</h2>
             </div>
           </div>
           <div class="product-new">
             <ul class="list-product-new">
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product1.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -496,7 +268,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -505,20 +277,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product2.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -527,7 +299,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -536,20 +308,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product3.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -558,7 +330,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -567,20 +339,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product4.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -589,7 +361,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -598,20 +370,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product5.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -620,7 +392,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -629,20 +401,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product1.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -651,7 +423,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -660,20 +432,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product2.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -682,7 +454,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -691,20 +463,20 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="col-md-3">
-                <div class="product-box">                             
-                  <div class="product-thumbnail flexbox-grid">  
+                <div class="product-box">
+                  <div class="product-thumbnail flexbox-grid">
                     <%= link_to "#" do %>
                     <%= image_tag "product/product3.jpg" %>
-                    <% end %> 
+                    <% end %>
                     <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                       <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
-                        <div> 
+                        <div>
                           <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                           </button>
@@ -713,7 +485,7 @@
                           <% end %>
                         </div>
                       </form>
-                    </div>  
+                    </div>
                   </div>
                   <div class="product-info a-center">
                     <h3 class="product-name">
@@ -722,7 +494,7 @@
                     <div class="price-box clearfix">
                       <div class="special-price">
                         <span class="price product-price">360.000₫</span>
-                      </div>                      
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -743,7 +515,7 @@
           <div class="text-center">
             <h3 class="title">Xem giới thiệu về Dualeo <span>Shoes</span></h3>
             <a data-fancybox="" href="https://www.youtube.com/watch?v=a_0GkKQ_nzc">
-              <img src="//bizweb.dktcdn.net/100/311/377/themes/672639/assets/icon-play-video.png?1539659617569" alt="Video sản phẩm"> 
+              <img src="//bizweb.dktcdn.net/100/311/377/themes/672639/assets/icon-play-video.png?1539659617569" alt="Video sản phẩm">
             </a>
           </div>
         </div>
@@ -756,7 +528,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="title">
-              <h2>THÔNG TIN KHUYẾN MÃI</h2>               
+              <h2>THÔNG TIN KHUYẾN MÃI</h2>
             </div>
           </div>
           <div class="col-md-12 news-post">
@@ -764,7 +536,7 @@
               <div class="item">
                 <article class="blog-item text-center">
                   <div>
-                    <div class="blog-item-thumbnail">           
+                    <div class="blog-item-thumbnail">
                       <%= link_to "#" do %>
                       <%= image_tag "post/image-5098.jpeg" %>
                       <% end %>
@@ -781,7 +553,7 @@
               <div class="item">
                 <article class="blog-item text-center">
                   <div>
-                    <div class="blog-item-thumbnail">           
+                    <div class="blog-item-thumbnail">
                       <%= link_to "#" do %>
                       <%= image_tag "post/image-2.jpeg" %>
                       <% end %>
@@ -798,7 +570,7 @@
               <div class="item">
                 <article class="blog-item text-center">
                   <div>
-                    <div class="blog-item-thumbnail">           
+                    <div class="blog-item-thumbnail">
                       <%= link_to "#" do %>
                       <%= image_tag "post/image-3.jpeg" %>
                       <% end %>
@@ -815,7 +587,7 @@
               <div class="item">
                 <article class="blog-item text-center">
                   <div>
-                    <div class="blog-item-thumbnail">           
+                    <div class="blog-item-thumbnail">
                       <%= link_to "#" do %>
                       <%= image_tag "post/image-5098.jpeg" %>
                       <% end %>

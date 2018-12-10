@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20181017085616) do
     t.integer "status"
     t.string "image"
     t.date "create_at"
-    t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

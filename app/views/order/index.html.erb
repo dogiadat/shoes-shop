@@ -1,5 +1,25 @@
 <session class="awe-section-2">
   <div class="special-offer-inr-block new-block" style="min-height: 50vh">
-
-  </div>
+  	<table class="table table-bordered">
+  		<thead>
+  			<th>Ten Giay</th>
+  			<th>So luong</th>
+  			<th>Don Gia</th>
+  			<th>Xoa</th>
+  		</thead>
+  		<tbody>
+		  	<% session[:cart].each do |product_id| %>
+		  		<%product = Product.find(product_id)%>
+		  		<tr>
+		  			<td><%= product.name %></td>
+		  			<td></td>
+		  			<td><%= product.price %></td>
+		  			<td>
+		  				<%= link_to "Xoa", "#", class: "btn btn-danger" %>
+		  			</td>
+		  		</tr>
+		  	<% end %>
+		  </tbody>
+  	</table>
+	 </div>
 </session>

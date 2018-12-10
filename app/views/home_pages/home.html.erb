@@ -120,9 +120,9 @@
                         <div class="product-action hidden-md hidden-sm hidden-xs clearfix">
                           <form action="/cart/add" method="post" class="variants form-nut-grid margin-bottom-0">
                             <div>
-                              <button class="btn-cart btn btn-primary  left-to" title="" type="button" onclick="window.location.href='#'">
+                              <%= link_to order_path(product_id: product.id), class: "btn-cart btn btn-primary  left-to" do %>
                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                              </button>
+                              <% end %>
                               <%= link_to "#", :class => "btn-gray btn_view btn right-to quick-view" do %>
                               <i class="fa fa-eye"></i>
                               <% end %>
